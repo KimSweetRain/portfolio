@@ -15,7 +15,7 @@
     <!-- Navbar 시작 -->
     <nav id="navbar">
         <div class="navbar__logo">
-            <i class="fa-solid fa-otter"></i>
+            <img src="./images/otter.png" alt="수달로고">
             <a href="#">SweetRain</a>
         </div>
         <ul class="navbar__menu">
@@ -39,9 +39,9 @@
     <section id="home">
         <div class="home__container">
             <img src="./images/profile.png" alt="Kimdb's photo" class="home__avatar">
-            <h1 class="home__title">안녕하세요. 저는 김단비입니다.</h1>
-            <h2 class="home__description">서울 은평구에 거주하고 있으며, ~ 입니다.</h2>
-            <button class="home__contact">연락주세요!</button>
+            <h2 class="home__title">안녕하세요. 저는 김단비입니다.</h2>
+            <h2 class="home__description">서울 은평구에 거주하고 있으며, ~ 입니다.</h3>
+            <button class="home__contact">Contact</button>
         </div>
     </section>
     <!-- Home 끝 -->
@@ -52,8 +52,7 @@
         <p>
             ○○컴퓨터고등학교 2018년 졸업<br>
             코리아IT아카데미 2023년 수료<br><br>
-            - **Velog 주소**<br>
-                [https://velog.io/@best1370](https://velog.io/@best1370)
+            <a href="https://velog.io/@best1370" id="velog">😊 Velog 방문하기 😊<br></a>
         </p>
         <div class="about__majors">
             <div class="major">
@@ -87,28 +86,33 @@
                 </div>
             </div>
         </div>
-        <div class="about_jobs">
-            <div class="job">
-                <img src="./images/upsokorea.gif" alt="업소코리아 로고">
+        <div class="about__jobs">
+            <div class="jobBox">
+                <div class="job">
+                    <img src="./images/upsokorea.gif" width="180px" alt="업소코리아 로고">
+                </div>
+                <div class="job__description">
+                    <p class="job__name">
+                        디자인팀 디자이너
+                    </p>
+                    <p class="job__period">
+                        2018.02 ~ 2018.08
+                    </p>
+                </div>
             </div>
-            <div class="job_description">
-                <p class="job__name">
-                    디자인팀 디자이너
-                </p>
-                <p class="job__period">
-                    2018.02 ~ 2018.08
-                </p>
-            </div>
-            <div class="job">
-                <img src="./images/tangun.png" alt="단군소프트 로고">
-            </div>
-            <div class="job_description">
-                <p class="job__name">
-                    BA팀 영업
-                </p>
-                <p class="job__period">
-                    2018.09 ~ 2022.06
-                </p>
+            <i class="fa-solid fa-angles-right" id="arrow-right"></i>
+            <div class="jobBox">
+                <div class="job">
+                    <img src="./images/tangun.png" width="180px" alt="단군소프트 로고">
+                </div>
+                <div class="job__description">
+                    <p class="job__name">
+                        BA팀 영업
+                    </p>
+                    <p class="job__period">
+                        2018.09 ~ 2022.06
+                    </p>
+                </div>
             </div>
         </div>
     </section>
