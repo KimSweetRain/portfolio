@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" href="./images/fish-solid.svg">
     <script src="https://kit.fontawesome.com/a677a66bf4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css">
+    <script defer src="./script.js"></script>
 </head>
 <body>
     <!-- Navbar 시작 -->
@@ -19,13 +20,13 @@
             <a href="#">SweetRain</a>
         </div>
         <ul class="navbar__menu">
-            <li class="navbar__menu__item active">HOME</li>
-            <li class="navbar__menu__item">ABOUT</li>
-            <li class="navbar__menu__item">SKILL</li>
-            <li class="navbar__menu__item">CAREER</li>
-            <li class="navbar__menu__item">PROJECT</li>
-            <li class="navbar__menu__item">REFERENCE</li>
-            <li class="navbar__menu__item">CONTACT</li>
+            <li class="navbar__menu__item active" data-link="#home">HOME</li>
+            <li class="navbar__menu__item" data-link="#about">ABOUT</li>
+            <li class="navbar__menu__item" data-link="#skills">SKILL</li>
+            <li class="navbar__menu__item" data-link="#work1">CAREER</li>
+            <li class="navbar__menu__item" data-link="#testimonials">PROJECT</li>
+            <li class="navbar__menu__item" data-link="#testimonials">REFERENCE</li>
+            <li class="navbar__menu__item" data-link="#contact">CONTACT</li>
         </ul>
         <!-- 버튼 시작 -->
         <button class="navbar__toggle-btn">
@@ -41,7 +42,7 @@
             <img src="./images/profile.png" alt="Kimdb's photo" class="home__avatar">
             <h2 class="home__title">안녕하세요. 저는 김단비입니다.</h2>
             <h2 class="home__description">서울 은평구에 거주하고 있으며, ~ 입니다.</h3>
-            <button class="home__contact">Contact</button>
+            <button class="home__contact" data-link="#contact">Contact</button>
         </div>
     </section>
     <!-- Home 끝 -->
@@ -52,7 +53,7 @@
         <p>
             ○○컴퓨터고등학교 2018년 졸업<br>
             코리아IT아카데미 2023년 수료<br><br>
-            <a href="https://velog.io/@best1370" id="velog">😊 Velog 방문하기 😊<br></a>
+            <a href="#" id="velog">😊 Velog 방문하기 😊<br></a>
         </p>
         <div class="about__majors">
             <div class="major">
@@ -150,10 +151,10 @@
                     <div class="skill">
                         <div class="skill_description">
                             <span>JavaScript</span>
-                            <span>70%</span>
+                            <span>50%</span>
                         </div>
                         <div class="skill__bar">
-                            <div class="skill__value" style="width:70%"></div>
+                            <div class="skill__value" style="width:50%"></div>
                         </div>
                     </div>
                     <div class="skill">
@@ -211,16 +212,18 @@
                             <li><span>Eclips</span></li>
                             <li><span>GitHub</span></li>
                             <li><span>Pycharm</span></li>
+                            <li><span>XD</span></li>
+                            <li><span>Protopie</span></li>
                         </ul>
                     </div>
-                </div>
-                <div class="etc">
-                    <h3 class="skillset__title">Etc</h3>
-                    <ul class="etc__list">
-                        <li><span>Math</span></li>
-                        <li><span>Run</span></li>
-                        <li><span>Music</span></li>
-                    </ul>
+                    <div class="etc">
+                        <h3 class="skillset__title">Etc</h3>
+                        <ul class="etc__list">
+                            <li><span>Math</span></li>
+                            <li><span>Run</span></li>
+                            <li><span>Music</span></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -228,26 +231,26 @@
     <!-- Skill 끝 -->
 
     <!-- Project 시작 -->
-    <section id="work" class="section">
+    <section id="work1" class="section">
         <div class="section__container">
             <h1>My workroom</h1>
             <h3>Project</h3>
             <div class="work_categories">
-                <button class="category__btn">
+                <button class="category__btn" data-filter="*">
                     All <span class="category__count">10</span>
                 </button>
-                <button class="category__btn">
+                <button class="category__btn" data-filter="front-end">
                     Front-end <span class="category__count">5</span>
                 </button>
-                <button class="category__btn">
+                <button class="category__btn" data-filter="back-end">
                     Back-end <span class="category__count">3</span>
                 </button>
-                <button class="category__btn">
+                <button class="category__btn" data-filter="mobile">
                     Mobile <span class="category__count">2</span>
                 </button>
             </div>
             <div class="work__project">
-                <a href="" class="project" target="_blank">
+                <a href="" class="project" target="_blank" data-type="front-end">
                     <!-- 만든거 캡쳐본 -->
                     <img src="./images/YouTube.png" alt="" class="project__img">
                     <div class="project__description">
@@ -255,7 +258,7 @@
                         <span>Clone Coding</span>
                     </div>
                 </a>
-                <a href="" class="project" target="_blank">
+                <a href="" class="project" target="_blank" data-type="front-end">
                     <!-- 만든거 캡쳐본 -->
                     <img src="./images/YouTube.png" alt="" class="project__img">
                     <div class="project__description">
@@ -263,7 +266,7 @@
                         <span>Clone Coding</span>
                     </div>
                 </a>
-                <a href="" class="project" target="_blank">
+                <a href="" class="project" target="_blank" data-type="back-end">
                     <!-- 만든거 캡쳐본 -->
                     <img src="./images/YouTube.png" alt="" class="project__img">
                     <div class="project__description">
@@ -271,7 +274,7 @@
                         <span>Clone Coding</span>
                     </div>
                 </a>
-                <a href="" class="project" target="_blank">
+                <a href="" class="project" target="_blank" data-type="mobile">
                     <!-- 만든거 캡쳐본 -->
                     <img src="./images/YouTube.png" alt="" class="project__img">
                     <div class="project__description">
@@ -279,7 +282,7 @@
                         <span>Clone Coding</span>
                     </div>
                 </a>
-                <a href="" class="project" target="_blank">
+                <a href="" class="project" target="_blank" data-type="back-end">
                     <!-- 만든거 캡쳐본 -->
                     <img src="./images/YouTube.png" alt="" class="project__img">
                     <div class="project__description">
@@ -287,7 +290,7 @@
                         <span>Clone Coding</span>
                     </div>
                 </a>
-                <a href="" class="project" target="_blank">
+                <a href="" class="project" target="_blank" data-type="front-end">
                     <!-- 만든거 캡쳐본 -->
                     <img src="./images/YouTube.png" alt="" class="project__img">
                     <div class="project__description">
@@ -295,7 +298,7 @@
                         <span>Clone Coding</span>
                     </div>
                 </a>
-                <a href="" class="project" target="_blank">
+                <a href="" class="project" target="_blank" data-type="mobile">
                     <!-- 만든거 캡쳐본 -->
                     <img src="./images/YouTube.png" alt="" class="project__img">
                     <div class="project__description">
@@ -303,7 +306,7 @@
                         <span>Clone Coding</span>
                     </div>
                 </a>
-                <a href="" class="project" target="_blank">
+                <a href="" class="project" target="_blank" data-type="front-end">
                     <!-- 만든거 캡쳐본 -->
                     <img src="./images/YouTube.png" alt="" class="project__img">
                     <div class="project__description">
@@ -311,11 +314,26 @@
                         <span>Clone Coding</span>
                     </div>
                 </a>
+            </div>
+        </div>
+    </section>
+    <!-- Project 끝 -->
+    <!-- Project 시작 -->
+    <section id="work2" class="section">
+        <div class="section__container">
+            <h1>My workroom</h1>
+            <h3>Project</h3>
+            <div class="work_categories">
+                <button class="category__btn">유튜브 클론코딩</button>
+                <button class="category__btn">에어비앤비 클론코딩</button>
+                <button class="category__btn">제주항공 클론코딩</button>
+                <button class="category__btn">진에어 클론코딩</button>
+            </div>
+            <div class="work__project">
                 <a href="" class="project" target="_blank">
                     <!-- 만든거 캡쳐본 -->
                     <img src="./images/YouTube.png" alt="" class="project__img">
                     <div class="project__description">
-                        <h3>SSG닷컴 클론코딩</h3>
                         <span>Clone Coding</span>
                     </div>
                 </a>
@@ -323,7 +341,20 @@
                     <!-- 만든거 캡쳐본 -->
                     <img src="./images/YouTube.png" alt="" class="project__img">
                     <div class="project__description">
-                        <h3>트리플 클론코딩</h3>
+                        <span>Clone Coding</span>
+                    </div>
+                </a>
+                <a href="" class="project" target="_blank">
+                    <!-- 만든거 캡쳐본 -->
+                    <img src="./images/YouTube.png" alt="" class="project__img">
+                    <div class="project__description">
+                        <span>Clone Coding</span>
+                    </div>
+                </a>
+                <a href="" class="project" target="_blank">
+                    <!-- 만든거 캡쳐본 -->
+                    <img src="./images/YouTube.png" alt="" class="project__img">
+                    <div class="project__description">
                         <span>Clone Coding</span>
                     </div>
                 </a>
@@ -358,8 +389,8 @@
     <!-- Reference 끝 -->
     <!-- Contact 시작 -->
     <section id="contact" class="section">
-        <h1 class="contact__title">연락주세요</h1>
-        <h2 class="contact__email">people7013@gmail.com</h2>
+        <!-- <h2 class="contact__title">연락주세요</h2> -->
+        <h3 class="contact__email">people7013@gmail.com</h3>
         <div class="contact__links">
             <a href="#" target="_blank">
                 <i class="fa-brands fa-github"></i>
@@ -374,6 +405,6 @@
     </section>
     <!-- Contact 끝 -->
     <button class="arrow-up">
-        <i class="fa-solid fa-arrow-up"></i>
+        <i class="fa-solid fa-arrow-up" data-link="#home"></i>
     </button>
 </body>
