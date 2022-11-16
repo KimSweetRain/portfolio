@@ -123,6 +123,7 @@ p {
 .navbar__menu {
     overflow: auto;
     display: flex;
+    margin: 0;
 }
 
 .navbar__menu__item {
@@ -130,11 +131,10 @@ p {
     margin: 0 4px;
     color: var(--color-black);
     cursor: pointer;
-}
-
-.navbar__menu__item.active {
-    border: 1px solid var(--color-gray);
     border-radius: var(--size-border-radius);
+}
+.navbar__menu__item.active {
+    border: 1px solid var(--color-gray)
 }
 
 .navbar__menu__item:hover {
@@ -148,10 +148,10 @@ p {
 
 .navbar__toggle-btn {
     position: absolute;
-    top: 24px;
+    top: 12px;
     right: 32px;
-    font-size: 24px;
-    color: var(--color-white);
+    font-size: 35px;
+    color: var(--color-gray);
     display: none;
 }
 
@@ -423,12 +423,12 @@ p {
     margin: 5px;
 }
 
-.category__btn.active, .category__btn:hover {
+.category__btn.selected, .category__btn:hover {
     background-color: var(--color-black);
     color: var(--color-white);
 }
 
-.category__btn.active .category__count,
+.category__btn.selected .category__count,
 .category__btn:hover .category__count  {
     opacity: 1;
     top: 0;
@@ -508,6 +508,16 @@ p {
     margin-left: -12px;
     margin-top: 8px;
     background-color: var(--color-gray3);
+}
+
+.work__project.anim-out {
+    opacity: 0;
+    transform: scale(0.96) translateY(40px);
+    transition: all var(--animation-duration) ease;
+}
+
+.project.invisible {
+    display: none;
 }
 
 /* work2번째버전 */
@@ -612,6 +622,7 @@ p {
 }
 
 
+
 /* 모바일 */
 @media screen and (max-width: 768px){
     .navbar__toggle-btn {
@@ -628,6 +639,15 @@ p {
         text-align: center;
         width: 100%;
         display: none;
+    }
+
+    .navbar__menu.open {
+        display: block;
+    }
+
+    /* 홈 */
+    #home {
+        margin-top: 65px;
     }
 
     /* 직업 */
